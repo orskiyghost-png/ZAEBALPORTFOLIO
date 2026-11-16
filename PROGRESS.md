@@ -13,22 +13,26 @@ Living status file. Update when a phase changes.
 
 ## Phase 1 — Scaffold
 
-- [ ] Vite + React + TypeScript project
-- [ ] Dependencies: react-router-dom, motion, @fontsource packages
-- [ ] Base path `/ZAEBALPORTFOLIO/`, router basename from `BASE_URL`
-- [ ] `tokens.css`, `global.css`, fonts loaded
-- [ ] Build passes
+- [x] Vite + React + TypeScript project
+- [x] Dependencies: react-router-dom, motion, @fontsource packages
+- [x] Base path `/ZAEBALPORTFOLIO/`, router basename from `BASE_URL`
+- [x] `tokens.css`, `global.css`, fonts loaded
+- [x] Build passes
 
 ## Phase 2 — Shell
 
-- [ ] App layout, route table, scroll restoration, page transitions
-- [ ] Nav with progressive blur, desktop links, mobile sheet
+- [x] App layout, route table, scroll restoration, page transitions
+- [x] Nav with progressive blur, desktop links, mobile sheet
 - [ ] Footer, marquee, cursor, background grain and thread
+  - [x] Footer, marquee, cursor, background grain, scroll progress
+  - [ ] Scarlet thread
 - [ ] Motion primitives: reveal, split headline, magnetic button, parallax
+  - [x] Reveal, split headline, magnetic button, shared reveal observer
+  - [ ] Parallax
 
 ## Phase 3 — Data and cards
 
-- [ ] `src/data/projects.ts` typed, six projects from `CONTENT.md`
+- [x] `src/data/projects.ts` typed, six projects from `CONTENT.md`
 - [ ] Project card, cover image, metadata row, hover states
 - [ ] Work index with filters
 
@@ -68,3 +72,4 @@ Living status file. Update when a phase changes.
 ## Log
 
 - 2026-11-16 — Directions, docs, skills, provider and MCP set up.
+- 2026-11-16 — Scaffold and shared shell built. All routes have minimal real content. `npm run build` and `npx tsc --noEmit` pass. Chromium checks cover twelve route cases at 360, 768, 1280, and 1600px, keyboard navigation, mobile focus containment, scroll restoration, progressive blur, and reduced motion. No console or network errors. Project slugs were assigned; decision bodies absent from `CONTENT.md` remain empty. Full page content, artwork, scarlet thread, and parallax remain for later phases.

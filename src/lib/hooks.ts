@@ -1,4 +1,40 @@
-import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
+
+export function useHeroParallax() {
+  const ref = useRef<HTMLElement>(null);
+  const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+    if (reducedMotion) {
+      element.style.removeProperty('--hero-image-y');
+      element.style.removeProperty('--hero-headline-y');
+      return;
+    }
+
+    let frame: number | null = null;
+    const update = () => {
+      frame = null;
+      const progress = Math.min(1, Math.max(0, window.scrollY / window.innerHeight));
+      element.style.setProperty('--hero-image-y', `${progress * -40}px`);
+      element.style.setProperty('--hero-headline-y', `${progress * 24}px`);
+    };
+    const schedule = () => {
+      if (frame === null) frame = window.requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    return () => {
+      if (frame !== null) window.cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+    };
+  }, [reducedMotion]);
+
+  return ref;
+}
 
 function useMediaQuery(query: string): boolean {
   const subscribe = useCallback((onChange: () => void) => {

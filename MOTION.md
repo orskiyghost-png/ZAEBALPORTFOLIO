@@ -25,7 +25,7 @@ Route change: current page drops `opacity` to `0` and `scale` to `0.99` over `18
 
 - **Split headline** — lines rise from `y: 110%` inside an overflow-hidden mask, `stagger: 0.07`, `520ms`, `--ease-out`. Words, not letters: letter-by-letter is noise.
 - **Body copy** — `opacity 0 → 1`, `y: 12px`, triggered at `amount: 0.3`, once.
-- **Images** — clip-path inset from `100% 0 0 0` to `0`, `900ms`, plus a `scale: 1.06 → 1` settle.
+- **Images** — a paper shutter translates from `y: 0%` to `-101%` inside a static `clip-path: inset(0)` boundary, `900ms`, plus a `scale: 1.06 → 1` settle. Clip-path itself never animates.
 - **Rules and marks** — width or path length grows in `520ms`. Registration marks fade in last, `80ms` after the section.
 
 ## Interaction

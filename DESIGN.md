@@ -65,7 +65,7 @@ Type rules:
 
 **Nav** — fixed top bar, paper tint over a progressive blur mask. Left: monogram `АС` in a scarlet square. Centre: route links with a scarlet rule that grows from the active item. Right: Telegram link and a local-time chip. Mobile: full-screen sheet with staggered links, closes on route change and Escape.
 
-**Hero** — oversized name, broken across two lines, one word in scarlet. A rendered scarlet sculpture sits behind or beside it, masked by the type. Bottom row: role list in mono, a scroll cue, and the proof-sheet coordinates.
+**Hero** — three-line positioning headline, last line in scarlet, beside a tall framed sculpture plate. A clamped counter-parallax separates headline and image. Bottom row: availability, response expectation and a scroll cue in mono.
 
 **Project card** — full-bleed index number, title in display, one-line problem statement, stack in mono, cover image with a slow scale on hover. Hover lifts the card `-6px` and turns the index scarlet.
 
@@ -79,10 +79,12 @@ Type rules:
 
 - **Home** — hero, marquee, selected work (3), capabilities, process (4 steps), about teaser, CTA.
 - **Work** — index header, filter by type, six project rows with covers.
-- **Project** — cover, fact table, problem, approach, three design decisions, stack, result, next project.
+- **Project** — cover, fact table, problem, approach, three design decisions, honest research question, stack, next project. No results or metrics without evidence.
 - **About** — editorial portrait, timeline, tools, principles, CTA.
-- **Contact** — availability, Telegram, email, response time, FAQ of three questions.
+- **Contact** — availability, Telegram, accessible handle copying, response time, FAQ of three native disclosure elements. Omit unverified email addresses.
 - **404** — one line, a scarlet mark, link home.
+
+Image plates reveal through a transformed paper shutter inside a static clip boundary. Only transform and opacity animate; reduced motion removes the shutter entirely.
 
 ## Anti-slop checklist
 

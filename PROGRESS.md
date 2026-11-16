@@ -28,39 +28,41 @@ Living status file. Update when a phase changes.
   - [ ] Scarlet thread
 - [ ] Motion primitives: reveal, split headline, magnetic button, parallax
   - [x] Reveal, split headline, magnetic button, shared reveal observer
-  - [ ] Parallax
+  - [x] Parallax
 
 ## Phase 3 — Data and cards
 
-Current phase: full page composition and typed content completion. Implementation plan: `docs/superpowers/plans/2026-11-16-PAGES.md`.
+Current phase: all page compositions are implemented and browser-verified. Remaining work is asset optimisation, deployment verification and the explicitly unchecked polish below. Implementation plan: `docs/superpowers/plans/2026-11-16-PAGES.md`.
 
 - [x] `src/data/projects.ts` typed, six projects from `CONTENT.md`
-- [ ] Project card, cover image, metadata row, hover states
-- [ ] Work index with filters
+- [x] Project card, cover image, metadata row, hover states
+- [x] Work index with filters
 
 ## Phase 4 — Pages
 
-- [ ] Home: hero, marquee, selected work, capabilities, process, about teaser, CTA
-- [ ] Work
-- [ ] Project detail (dynamic route)
-- [ ] About
-- [ ] Contact
-- [ ] 404
+- [x] Home: hero, marquee, selected work, capabilities, process, about teaser, CTA
+- [x] Work
+- [x] Project detail (dynamic route)
+- [x] About
+- [x] Contact
+- [x] 404
 
 ## Phase 5 — Assets
 
-- [ ] Hero scarlet sculpture
-- [ ] About portrait / figure
-- [ ] Six project covers
+- [x] Hero scarlet sculpture
+- [x] About portrait / figure
+- [x] Six project covers
 - [ ] Favicon and social preview
 - [ ] All images optimised, alt text in Russian
 
 ## Phase 6 — QA
 
-- [ ] Responsive check 360 / 768 / 1280 / 1600
+- [x] Responsive check 360 / 768 / 1280 / 1600
 - [ ] Keyboard path, focus rings, contrast
-- [ ] Reduced motion
-- [ ] No console errors, no horizontal scroll
+  - [x] Keyboard navigation, focus rings, focus-equivalent project preview, mobile menu Escape and focus restoration
+  - [ ] Full contrast audit
+- [x] Reduced motion
+- [x] No console errors, no horizontal scroll
 - [ ] Lighthouse pass
 
 ## Phase 7 — Deploy
@@ -75,3 +77,4 @@ Current phase: full page composition and typed content completion. Implementatio
 
 - 2026-11-16 — Directions, docs, skills, provider and MCP set up.
 - 2026-11-16 — Scaffold and shared shell built. All routes have minimal real content. `npm run build` and `npx tsc --noEmit` pass. Chromium checks cover twelve route cases at 360, 768, 1280, and 1600px, keyboard navigation, mobile focus containment, scroll restoration, progressive blur, and reduced motion. No console or network errors. Project slugs were assigned; decision bodies absent from `CONTENT.md` remain empty. Full page content, artwork, scarlet thread, and parallax remain for later phases.
+- 2026-11-16 — Replaced all six placeholder pages with full editorial compositions. Fixed all six JPEG paths and the `tihiy-chas` slug, completed decision bodies, added honest project questions and concept notes. Home includes selected projects, capabilities, process, about teaser, CTA and clamped one-frame hero counter-parallax. Work has counted filters, including research concepts; details have five facts, three decisions and cycling next-project links. Contact uses Telegram only, clipboard feedback and native FAQ. Build and strict TypeScript pass. Chromium verified twelve route cases at 360/768/1280/1600, all image requests, filter counts 6/2/3/1, keyboard project preview, next-project cycling, clipboard success/failure, native disclosures, mobile menu Escape and reduced motion. Parallax clamps at -40px/+24px; reduced motion removes transforms and image shutters. Screenshots saved under `/tmp/opencode/`; this environment cannot visually inspect image inputs. Lighthouse, a full contrast audit, image format optimisation and live deployment verification remain unchecked.

@@ -2,7 +2,11 @@ import { site } from '../data/site';
 import { MagneticButton } from './MagneticButton';
 import { Reveal } from './Reveal';
 
-export function ContactCta() {
+interface ContactCtaProps {
+  toContact?: boolean;
+}
+
+export function ContactCta({ toContact = false }: ContactCtaProps) {
   return (
     <section className="contact-cta container section" aria-labelledby="contact-cta-heading">
       <Reveal>
@@ -11,7 +15,7 @@ export function ContactCta() {
         <div className="contact-cta__bottom">
           <p>{site.contact.ctaBody}</p>
           <div className="contact-cta__action">
-            <MagneticButton href={site.telegram}>Написать в Telegram</MagneticButton>
+            {toContact ? <MagneticButton to="/contact">Обсудить задачу</MagneticButton> : <MagneticButton href={site.telegram}>Написать в Telegram</MagneticButton>}
             <span className="mono">Отвечаю в течение дня</span>
           </div>
         </div>

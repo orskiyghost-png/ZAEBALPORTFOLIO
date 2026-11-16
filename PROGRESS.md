@@ -32,6 +32,8 @@ Living status file. Update when a phase changes.
 
 ## Phase 3 — Data and cards
 
+Current phase: full page composition and typed content completion. Implementation plan: `docs/superpowers/plans/2026-11-16-PAGES.md`.
+
 - [x] `src/data/projects.ts` typed, six projects from `CONTENT.md`
 - [ ] Project card, cover image, metadata row, hover states
 - [ ] Work index with filters
